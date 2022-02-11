@@ -1,4 +1,4 @@
-module oauth1
+module github.com/ikari-pl/oauth1
 
 go 1.17
 
