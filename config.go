@@ -66,7 +66,8 @@ func NewClient(ctx context.Context, config *Config, token *Token) *http.Client {
 // (temporary credentials).
 // See RFC 5849 2.1 Temporary Credentials.
 func (c *Config) RequestToken() (requestToken, requestSecret string, err error) {
-	req, err := http.NewRequest("POST", c.Endpoint.RequestTokenURL, strings.NewReader("dummy"))
+	// in order to enforce the Content-Length header to be set, pass a dummy param
+	req, err := http.NewRequest("POST", c.Endpoint.RequestTokenURL, strings.NewReader("k=v"))
 	if err != nil {
 		return "", "", err
 	}
