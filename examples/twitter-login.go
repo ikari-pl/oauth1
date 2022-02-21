@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/dghubble/oauth1"
-	twauth "github.com/dghubble/oauth1/twitter"
+	"github.com/ikari-pl/oauth1"
+	twauth "github.com/ikari-pl/oauth1/twitter"
 )
 
 const outOfBand = "oob"
